@@ -2,6 +2,8 @@
 
 PAS Department application
 
+<b>Complete code available under branch "Final_commit"<b>
+
 PAS department application allows authorized department personnels to upload post to the application. Post can contain message, priority, attachments and region(pincodes, district or state).
 
 1) Registration : 
