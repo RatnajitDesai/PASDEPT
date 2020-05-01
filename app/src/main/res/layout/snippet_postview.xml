@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="20dp"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/relLayout1"
+        android:background="@drawable/bottom_border"
+
+        >
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/departmentLogo"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/departmentName"
+            android:layout_toEndOf="@id/departmentLogo"
+            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="bold"
+            style="@style/TextAppearance.MaterialComponents.Body2" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/ivPostPriority"
+            android:src="@drawable/ic_priority" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout2"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_below="@id/relLayout1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rvPostAttachments"
+            android:contentDescription="@string/post_image"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3 Files (Scroll sideways to view)"
+            android:textAlignment="viewStart"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:fontFamily="sans-serif-thin"
+            android:id="@+id/attachmentsDescriptor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="11 Jan 2020, 08:50 AM"
+            android:textAlignment="viewStart"
+            android:layout_marginTop="5dp"
+            android:paddingStart="10dp"
+            android:id="@+id/timestamp"
+            android:paddingEnd="10dp"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:autoLink="all"
+            android:layout_marginTop="5dp"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/postMessage" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout3"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/relLayout2">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:text="Share"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
